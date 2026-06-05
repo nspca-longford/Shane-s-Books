@@ -345,7 +345,7 @@ function pill(text,color){
 
 /* ---------- init ---------- */
 async function init(){
-  supa = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+  supa = supabase.createClient(SUPABASE_URL, SUPABASE_KEY, { auth: { persistSession:false, autoRefreshToken:false } });
   await loadLibrary();
 }
 
